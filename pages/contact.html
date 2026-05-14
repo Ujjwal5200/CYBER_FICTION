@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CYBERFICTION — Premium 3D Creative Studio</title>
+    <meta name="description" content="Ready to create something extraordinary? Contact CYBERFICTION to start your next 3D project.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <div class="loading-overlay" id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Entering Digital Realm</div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="ambient-glow ambient-glow--gold"></div>
+    <div class="ambient-glow ambient-glow--cyan"></div>
+    <div class="ambient-glow ambient-glow--purple"></div>
+
+    <div id="canvas-container"><canvas id="model-canvas"></canvas></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <nav id="nav">
+        <a href="../index.html" class="logo">CYBER<span class="logo-dot">.</span>FICTION</a>
+        <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="work.html" class="nav-link">Work</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Start a Project →</a>
+        <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="nav-mobile" id="mobileNav" style="display:none;">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="work.html" class="nav-link">Work</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="hero-section" style="min-height:60vh;">
+            <div class="hero-grid" style="grid-template-columns:1fr; max-width:900px; margin:0 auto; padding:0 2rem;">
+                <div class="hero-content" style="text-align:center; margin:0 auto;">
+                    <div class="hero-eyebrow">✦ Get In Touch</div>
+                    <h1 class="hero-title">Let's Build <span class="gradient-text">Something Remarkable</span></h1>
+                    <p class="hero-description" style="margin:0 auto;">Whether it's a product visualization, immersive brand experience, or cinematic masterpiece — we're here to bring your boldest ideas to life.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-container">
+            <section class="section" style="padding-top:0;">
+                <div class="contact-container">
+                    <div class="section-header">
+                        <div class="section-eyebrow">Start a Conversation</div>
+                        <h2 class="section-title">Tell Us About<br><span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Your Vision</span></h2>
+                    </div>
+                    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your company or organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="project">Project Type</label>
+                            <input type="text" id="project" name="project" placeholder="3D Visualization, Motion Design, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Vision</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your project goals, timeline..." style="min-height:160px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section" style="padding-top:0;">
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:2rem; max-width:1000px; margin:0 auto;">
+                    <div class="glass-card" style="text-align:center;padding:2.5rem;"><div style="font-size:2rem;margin-bottom:1rem;">📧</div><h4 style="font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Email Us</h4><p style="color:var(--text-secondary);font-size:0.9rem;">hello@cyberfiction.studio</p></div>
+                    <div class="glass-card" style="text-align:center;padding:2.5rem;"><div style="font-size:2rem;margin-bottom:1rem;">📞</div><h4 style="font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Call Us</h4><p style="color:var(--text-secondary);font-size:0.9rem;">+1 (555) 987-6543</p></div>
+                    <div class="glass-card" style="text-align:center;padding:2.5rem;"><div style="font-size:2rem;margin-bottom:1rem;">🌍</div><h4 style="font-size:1rem;font-weight:600;margin-bottom:0.5rem;">Visit Our Studio</h4><p style="color:var(--text-secondary);font-size:0.9rem;">San Francisco, CA</p></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-left">&copy; 2026 CYBERFICTION. All rights reserved.</p>
+            <div class="footer-divider"></div>
+            <div class="footer-right">
+                <a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a><a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            var form = e.target;
+            var msg = document.createElement('div');
+            msg.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(3,3,8,0.95);border:1px solid var(--accent-gold);border-radius:16px;padding:3rem;text-align:center;z-index:10000;box-shadow:0 0 60px rgba(201,168,108,0.5);max-width:420px;width:90%;';
+            msg.innerHTML = '<div style="font-size:3rem;margin-bottom:1rem;">✦</div><h3 style="color:var(--accent-gold);margin-bottom:1rem;">Message Sent Successfully</h3><p style="color:var(--text-secondary);margin-bottom:2rem;line-height:1.7;">Our team will review your inquiry and get back to you within 24 hours.</p><button onclick="this.closest(\'div\').remove()" style="padding:0.8rem 2.5rem;background:var(--gradient-gold);color:var(--bg-primary);border:none;border-radius:var(--radius-sm);font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:2px;font-size:0.85rem;font-family:var(--font-primary);">Close</button>';
+            document.body.appendChild(msg);
+            form.reset();
+        }
+    </script>
+</body>
+</html>

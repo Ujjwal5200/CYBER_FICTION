@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | CYBERFICTION — Premium 3D Creative Studio</title>
+    <meta name="description" content="Learn about CYBERFICTION — Our story, team, and vision for pushing the boundaries of 3D digital innovation since 2014.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <div class="loading-overlay" id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Entering Digital Realm</div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="ambient-glow ambient-glow--gold"></div>
+    <div class="ambient-glow ambient-glow--cyan"></div>
+    <div class="ambient-glow ambient-glow--purple"></div>
+
+    <div id="canvas-container">
+        <canvas id="model-canvas"></canvas>
+    </div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <nav id="nav">
+        <a href="../index.html" class="logo">CYBER<span class="logo-dot">.</span>FICTION</a>
+        <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="work.html" class="nav-link">Work</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Start a Project →</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <div class="nav-mobile" id="mobileNav" style="display:none;">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="work.html" class="nav-link">Work</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="hero-section" style="min-height:60vh;">
+            <div class="hero-grid" style="grid-template-columns:1fr; max-width:900px; margin:0 auto; padding:0 2rem;">
+                <div class="hero-content" style="text-align:center; margin:0 auto;">
+                    <div class="hero-eyebrow">✦ Our Story</div>
+                    <h1 class="hero-title">Where Visionary Art Meets<br><span class="gradient-text">Cutting-Edge Technology</span></h1>
+                    <p class="hero-description" style="margin:0 auto;">
+                        Since 2014, we have been at the forefront of 3D digital innovation — crafting immersive experiences that redefine how the world sees, feels, and interacts with digital content.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-container">
+            <section class="section" style="padding-top:0;">
+                <div style="max-width:900px;margin:0 auto; text-align:center;">
+                    <div class="section-eyebrow" style="margin-bottom:1rem;">Crafting the Future</div>
+                    <p style="font-size:1.1rem; color:var(--text-secondary); line-height:2; font-weight:300; max-width:800px; margin:0 auto 4rem;">
+                        CYBERFICTION was born from a singular belief: that digital experiences should move people as deeply as any work of art. What began as a small collective of passionate 3D artists has evolved into a globally recognized studio, trusted by Fortune 500 enterprises and disruptive startups alike to deliver projects that transcend expectations.
+                    </p>
+                    <p style="font-size:1.1rem; color:var(--text-secondary); line-height:2; font-weight:300; max-width:800px; margin:0 auto;">
+                        Our multidisciplinary team — spanning artists, engineers, designers, and technologists — unites under one roof to push the boundaries of what's possible in digital media. Every project is a collaboration, every pixel intentional, every experience crafted to leave an indelible impression.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section" style="padding:60px 0;">
+                <div class="glass-card" style="max-width:1000px;margin:0 auto;padding:4rem;text-align:center;">
+                    <div class="stats-grid" style="margin-top:0;">
+                        <div class="stat-item"><div class="stat-number" data-target="500">0</div><div class="stat-label">Projects Delivered</div></div>
+                        <div class="stat-item"><div class="stat-number" data-target="150">0</div><div class="stat-label">Global Clients</div></div>
+                        <div class="stat-item"><div class="stat-number" data-target="24">0</div><div class="stat-label">Industry Awards</div></div>
+                        <div class="stat-item"><div class="stat-number" data-target="10">0</div><div class="stat-label">Years of Innovation</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" style="background:var(--bg-secondary);">
+                <div class="section-header">
+                    <div class="section-eyebrow">Our Pillars</div>
+                    <h2 class="section-title">The Principles That <span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Define Us</span></h2>
+                    <p class="section-desc">Core values that guide every project, every decision, every interaction.</p>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; max-width:1200px; margin:0 auto;">
+                    <div class="glass-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🎯</div><h3 style="font-size:1.3rem;font-weight:600;margin-bottom:0.8rem;">Precision</h3><p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">Every detail matters. We obsess over pixel-perfect execution to deliver results that exceed the highest standards.</p></div>
+                    <div class="glass-card"><div style="font-size:2.5rem;margin-bottom:1rem;">💡</div><h3 style="font-size:1.3rem;font-weight:600;margin-bottom:0.8rem;">Innovation</h3><p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">We embrace emerging technologies and creative methodologies to pioneer solutions that shape tomorrow's digital landscape.</p></div>
+                    <div class="glass-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🤝</div><h3 style="font-size:1.3rem;font-weight:600;margin-bottom:0.8rem;">Collaboration</h3><p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">Your vision, amplified. We partner with you at every stage to ensure the final creation authentically represents your brand.</p></div>
+                    <div class="glass-card" style="background:linear-gradient(135deg,rgba(201,168,108,0.08),rgba(0,243,255,0.04));"><div style="font-size:2.5rem;margin-bottom:1rem;">🏆</div><h3 style="font-size:1.3rem;font-weight:600;margin-bottom:0.8rem;">Excellence</h3><p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">No compromises. We deliver only work we're proud of — refined, polished, and ready to make an impact.</p></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-left">&copy; 2026 CYBERFICTION. All rights reserved.</p>
+            <div class="footer-divider"></div>
+            <div class="footer-right">
+                <a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a><a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

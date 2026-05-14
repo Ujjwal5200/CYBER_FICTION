@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CYBERFICTION — Premium 3D Creative Studio</title>
+    <meta name="description" content="CYBERFICTION — Award-winning 3D creative studio crafting immersive digital experiences for visionary brands. We shape digital reality.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="loading-overlay" id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Entering Digital Realm</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Ambient Glow Effects -->
+    <div class="ambient-glow ambient-glow--gold"></div>
+    <div class="ambient-glow ambient-glow--cyan"></div>
+    <div class="ambient-glow ambient-glow--purple"></div>
+
+    <!-- 3D Model Canvas - Fixed Background -->
+    <div id="canvas-container">
+        <canvas id="model-canvas"></canvas>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <a href="index.html" class="logo">CYBER<span class="logo-dot">.</span>FICTION</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
+            <li><a href="pages/about.html" class="nav-link" data-page="about">About</a></li>
+            <li><a href="pages/services.html" class="nav-link" data-page="services">Services</a></li>
+            <li><a href="pages/work.html" class="nav-link" data-page="work">Work</a></li>
+            <li><a href="pages/contact.html" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+        <a href="pages/contact.html" class="nav-cta">Start a Project →</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-mobile" id="mobileNav" style="display:none;">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="pages/about.html" class="nav-link">About</a>
+            <a href="pages/services.html" class="nav-link">Services</a>
+            <a href="pages/work.html" class="nav-link">Work</a>
+            <a href="pages/contact.html" class="nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-eyebrow">✦ Award-Winning Studio</div>
+                    <h1 class="hero-title">
+                        We Shape<br>
+                        <span class="gradient-text">Digital Reality</span><br>
+                        <span class="outline-text">Digital Reality</span>
+                    </h1>
+                    <p class="hero-description">
+                        Pioneering the frontier of 3D creativity. We architect immersive digital experiences that transcend the ordinary — blending cutting-edge technology with visionary artistry to transform how brands connect with their audiences.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="pages/contact.html" class="btn-primary">
+                            Begin Your Project
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#showcase" class="btn-secondary">
+                            Explore Work
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-number" data-target="500">0</div>
+                            <div class="hero-stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number" data-target="150">0</div>
+                            <div class="hero-stat-label">Global Clients</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number" data-target="24">0</div>
+                            <div class="hero-stat-label">Industry Awards</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-3d-canvas" id="heroCanvas">
+                    <canvas id="hero-3d"></canvas>
+                    <div class="hero-glow-ring"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SHOWCASE SECTION ===== -->
+        <section class="section" id="showcase">
+            <div class="page-container">
+                <div class="section-header">
+                    <div class="section-eyebrow">Featured Work</div>
+                    <h2 class="section-title">Crafting Digital <span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Masterpieces</span></h2>
+                    <p class="section-desc">A curated selection of our most impactful projects — where imagination meets precision and every pixel tells a story.</p>
+                </div>
+                <div class="portfolio-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:2rem;">
+                    <div class="glass-card" style="padding:0; overflow:hidden; min-height:280px; position:relative;">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=800&fit=crop" alt="Neon Dreams" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;">
+                        <div style="position:absolute; bottom:0; left:0; right:0; padding:2rem; background:linear-gradient(transparent, rgba(3,3,8,0.9));">
+                            <h4 style="font-size:1.3rem; font-weight:600; margin-bottom:0.3rem;">Neon Dreams</h4>
+                            <span style="font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent-gold);">Photorealistic Visualization</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" style="padding:0; overflow:hidden; min-height:280px; position:relative;">
+                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=800&fit=crop" alt="Cyber Realm" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;">
+                        <div style="position:absolute; bottom:0; left:0; right:0; padding:2rem; background:linear-gradient(transparent, rgba(3,3,8,0.9));">
+                            <h4 style="font-size:1.3rem; font-weight:600; margin-bottom:0.3rem;">Cyber Realm</h4>
+                            <span style="font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent-cyan);">Interactive Experience</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" style="padding:0; overflow:hidden; min-height:280px; position:relative;">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=800&fit=crop" alt="Digital Horizon" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;">
+                        <div style="position:absolute; bottom:0; left:0; right:0; padding:2rem; background:linear-gradient(transparent, rgba(3,3,8,0.9));">
+                            <h4 style="font-size:1.3rem; font-weight:600; margin-bottom:0.3rem;">Digital Horizon</h4>
+                            <span style="font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent-magenta);">Cinematic Motion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES SECTION ===== -->
+        <section class="section" style="background:var(--bg-secondary);">
+            <div class="page-container">
+                <div class="section-header">
+                    <div class="section-eyebrow">What We Do</div>
+                    <h2 class="section-title">Services That <span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Transcend</span></h2>
+                    <p class="section-desc">From photorealistic visualization to immersive interactive experiences, we deliver excellence across every dimension of digital creation.</p>
+                </div>
+                <div class="services-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:2rem;">
+                    <div class="glass-card">
+                        <div class="service-icon" style="width:72px;height:72px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;background:rgba(0,243,255,0.08);border-radius:16px;border:1px solid rgba(0,243,255,0.15);">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:0.8rem;">3D Visualization</h3>
+                        <p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">Photorealistic rendering and architectural visualization that transforms concepts into stunning, production-ready imagery.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="service-icon" style="width:72px;height:72px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;background:rgba(123,47,247,0.08);border-radius:16px;border:1px solid rgba(123,47,247,0.15);">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:0.8rem;">Motion Design</h3>
+                        <p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">Sophisticated animations and cinematic motion graphics that tell compelling stories through every frame.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="service-icon" style="width:72px;height:72px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;background:rgba(201,168,108,0.08);border-radius:16px;border:1px solid rgba(201,168,108,0.15);">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:0.8rem;">Interactive Experiences</h3>
+                        <p style="color:var(--text-secondary);line-height:1.8;font-weight:300;">Immersive WebGL and real-time 3D experiences that push the boundaries of interactivity and engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA SECTION ===== -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2 class="cta-title">Ready to Create <span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Something Extraordinary?</span></h2>
+                <p class="cta-desc">Let's collaborate to bring your vision to life. Whether it's a product visualization, immersive experience, or cinematic masterpiece — we're ready to push boundaries together.</p>
+                <a href="pages/contact.html" class="btn-primary">
+                    Start Your Project →
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <p>&copy; 2026 CYBERFICTION. All rights reserved.</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-right">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Behance">Behance</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="Dribbble">Dribbble</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

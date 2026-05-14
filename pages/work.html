@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | CYBERFICTION — Premium 3D Creative Studio</title>
+    <meta name="description" content="Explore CYBERFICTION's award-winning portfolio of 3D visualization, motion design, and interactive experiences.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <div class="loading-overlay" id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Entering Digital Realm</div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="ambient-glow ambient-glow--gold"></div>
+    <div class="ambient-glow ambient-glow--cyan"></div>
+    <div class="ambient-glow ambient-glow--purple"></div>
+
+    <div id="canvas-container"><canvas id="model-canvas"></canvas></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <nav id="nav">
+        <a href="../index.html" class="logo">CYBER<span class="logo-dot">.</span>FICTION</a>
+        <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="work.html" class="nav-link active">Work</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Start a Project →</a>
+        <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="nav-mobile" id="mobileNav" style="display:none;">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="work.html" class="nav-link active">Work</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="hero-section" style="min-height:60vh;">
+            <div class="hero-grid" style="grid-template-columns:1fr; max-width:900px; margin:0 auto; padding:0 2rem;">
+                <div class="hero-content" style="text-align:center; margin:0 auto;">
+                    <div class="hero-eyebrow">✦ Selected Work</div>
+                    <h1 class="hero-title">A Portfolio of <span class="gradient-text">Impossibilities</span></h1>
+                    <p class="hero-description" style="margin:0 auto;">Every project is a dialogue between imagination and engineering. Browse a curated collection of our most impactful work.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-container">
+            <section class="section" style="padding-top:0;">
+                <div class="glass-card" style="padding:0; overflow:hidden; border-radius:var(--radius-md);">
+                    <div style="position:relative;">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1400&h=700&fit=crop" alt="Featured Project" style="width:100%;height:500px;object-fit:cover;">
+                        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(3,3,8,0.9) 100%);display:flex;align-items:flex-end;padding:3rem;">
+                            <div>
+                                <div class="section-eyebrow">Featured Project</div>
+                                <h2 style="font-size:clamp(2rem,4vw,3.5rem);font-weight:100;letter-spacing:-1px;margin-bottom:0.5rem;">Neon Dreams</h2>
+                                <p style="color:var(--text-secondary);font-size:1rem;max-width:600px;font-weight:300;">A photorealistic visualization that redefines urban aesthetics — blending architectural precision with atmospheric storytelling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" style="padding-top:0;">
+                <div class="section-header">
+                    <div class="section-eyebrow">More Projects</div>
+                    <h2 class="section-title" style="text-align:center;">Beyond the <span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Ordinary</span></h2>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=800&fit=crop" alt="Cyber Realm">
+                        <div class="portfolio-info"><h4>Cyber Realm</h4><span>Interactive Experience</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=800&fit=crop" alt="Digital Horizon">
+                        <div class="portfolio-info"><h4>Digital Horizon</h4><span>Cinematic Motion</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1629140720221-4435c9a3fbc6?w=800&h=800&fit=crop" alt="MetaVerse City">
+                        <div class="portfolio-info"><h4>MetaVerse City</h4><span>Virtual Environment</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1635764669697-1bf45f0d3e07?w=800&h=800&fit=crop" alt="Neural Interface">
+                        <div class="portfolio-info"><h4>Neural Interface</h4><span>Interactive Prototype</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1635554155150-26ac1e88502b?w=800&h=800&fit=crop" alt="Synthetic Life">
+                        <div class="portfolio-info"><h4>Synthetic Life</h4><span>Character Design</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=800&fit=crop" alt="Architectural Dreams">
+                        <div class="portfolio-info"><h4>Architectural Dreams</h4><span>Architecture</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">Let's Create <span class="gradient-text" style="background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Together</span></h2>
+                    <p class="cta-desc">Inspired? Bring your vision to the next level. Let's discuss your upcoming project.</p>
+                    <a href="contact.html" class="btn-primary">Start Your Project →
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-left">&copy; 2026 CYBERFICTION. All rights reserved.</p>
+            <div class="footer-divider"></div>
+            <div class="footer-right">
+                <a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a><a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
