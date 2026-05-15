@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -27,12 +29,9 @@
     <div class="ambient-glow ambient-glow--cyan"></div>
     <div class="ambient-glow ambient-glow--purple"></div>
 
-    <!-- Fullscreen background canvas -->
     <div id="canvas-container">
         <canvas id="model-canvas"></canvas>
     </div>
-
-    <!-- Particle Canvas -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
@@ -102,6 +101,9 @@
                 <div class="hero-model-wrap">
                     <canvas id="hero-model-canvas"></canvas>
                     <div class="hero-model-glow"></div>
+                    <img id="model-lqip" src="assets/models/male0001-tiny.png"
+                         style="width:100%;height:100%;object-fit:contain;position:absolute;inset:0;z-index:1;filter:blur(20px);opacity:0.35;transition:opacity 0.6s ease;border-radius:var(--radius-xl);"
+                         alt="Loading 3D model…" width="160" height="125" loading="eager">
                 </div>
             </div>
 
@@ -111,73 +113,133 @@
             </div>
         </section>
 
-        <!-- ===== SHOWCASE SECTION ===== -->
-        <section class="section" id="showcase">
+        <!-- ===== OUR PHILOSOPHY — LESSON / PHILOSOPHY SECTION ===== -->
+        <section class="section section--lesson" style="background:var(--bg-secondary);">
+            <div class="page-container">
+                <div class="section-header">
+                    <div class="section-eyebrow">Our Philosophy</div>
+                    <h2 class="section-title">Where Art Meets <span class="gradient-text">Algorithms</span></h2>
+                </div>
+
+                <div class="lesson-body">
+                    <p class="lesson-lede">
+                        At CYBERFICTION, we believe that extraordinary digital experiences arise from the tension between artistic intuition and engineering precision — not from the absence of either. Every pixel, every frame, every polygon is a deliberate act of craft.
+                    </p>
+
+                    <h3 class="lesson-subhead">The Discipline of Detail</h3>
+                    <p>
+                        In the world of 3D, the difference between "good" and "unforgettable" lives in the details that most people never consciously notice. Subsurface scattering that makes skin feel alive under light. Caustic refraction patterns that dance across a surface just so. The micro-occlusion that tells the eye this surface has touched something before. These are not flourishes — they are commitments to the truth of how things look when they truly exist.
+                    </p>
+                    <p>
+                        Our artists bring this obsessive attention to detail across every phase of production. From the first concept sketch to the final image-render pass, we ask not "is this passable?" but "is this the very best it can possibly be?" That standard separates a portfolio from a legacy.
+                    </p>
+
+                    <h3 class="lesson-subhead">Color as Narrative</h3>
+                    <p>
+                        Color in 3D is never merely decorative — it is storytelling. The warmth of a gold accent casting long shadows in a productviz, the sickly cyan glow inside a server rack, the purple dusk bleeding across a building facade at golden hour. We build every render palette around the emotional truth of what we are depicting, so that the viewer feels the scene before they understand it.
+                    </p>
+                    <p>
+                        This same philosophy drives every pixel of our web presence. The interplay of our dark ground, our signature warm gold, and our sharp cyan accents is not arbitrary. It mirrors the way light behaves in great 3D environments: layered, intentional, and always purposeful. Our website is not just a portfolio — it is a living argument for the standard we bring to every project.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+<!-- ===== SHOWCASE SECTION ===== -->
+         <section class="section section--shot-2" id="showcase">
             <div class="page-container">
                 <div class="section-header">
                     <div class="section-eyebrow">Featured Work</div>
                     <h2 class="section-title">Crafting Digital <span class="gradient-text">Masterpieces</span></h2>
-                    <p class="section-desc">A curated selection of our most impactful projects.</p>
+                    <p class="section-desc">A curated selection of our most impactful projects — each one a benchmark in its category.</p>
                 </div>
                 <div class="portfolio-grid">
-                    <div class="glass-card" style="padding:0;overflow:hidden;min-height:280px;position:relative;">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=800&fit=crop" alt="Neon Dreams" width="800" height="800" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(transparent,rgba(3,3,8,0.9));">
-                            <h4 style="font-size:1.3rem;font-weight:600;margin-bottom:0.3rem;">Neon Dreams</h4>
-                            <span style="font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent-gold);">Photorealistic Visualization</span>
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=800&fit=crop" alt="Neon Dreams" width="800" height="800" loading="lazy">
+                        <div class="portfolio-card__content">
+                            <h4>Neon Dreams</h4>
+                            <span>Photorealistic Visualization</span>
                         </div>
                     </div>
-                    <div class="glass-card" style="padding:0;overflow:hidden;min-height:280px;position:relative;">
-                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=800&fit=crop" alt="Cyber Realm" width="800" height="800" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(transparent,rgba(3,3,8,0.9));">
-                            <h4 style="font-size:1.3rem;font-weight:600;margin-bottom:0.3rem;">Cyber Realm</h4>
-                            <span style="font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent-cyan);">Interactive Experience</span>
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=800&fit=crop" alt="Cyber Realm" width="800" height="800" loading="lazy">
+                        <div class="portfolio-card__content">
+                            <h4>Cyber Realm</h4>
+                            <span>Interactive Experience</span>
                         </div>
                     </div>
-                    <div class="glass-card" style="padding:0;overflow:hidden;min-height:280px;position:relative;">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=800&fit=crop" alt="Digital Horizon" width="800" height="800" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(transparent,rgba(3,3,8,0.9));">
-                            <h4 style="font-size:1.3rem;font-weight:600;margin-bottom:0.3rem;">Digital Horizon</h4>
-                            <span style="font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent-magenta);">Cinematic Motion</span>
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=800&fit=crop" alt="Digital Horizon" width="800" height="800" loading="lazy">
+                        <div class="portfolio-card__content">
+                            <h4>Digital Horizon</h4>
+                            <span>Cinematic Motion</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SERVICES SECTION ===== -->
-        <section class="section" style="background:var(--bg-secondary);">
+<!-- ===== SERVICES SECTION ===== -->
+         <section class="section section--shot-3" style="background:var(--bg-secondary);">
             <div class="page-container">
                 <div class="section-header">
                     <div class="section-eyebrow">What We Do</div>
                     <h2 class="section-title">Services That <span class="gradient-text">Transcend</span></h2>
-                    <p class="section-desc">From photorealistic visualization to immersive interactive experiences.</p>
+                    <p class="section-desc">From photorealistic product renders to immersive WebGL environments — our studio delivers across every dimension of digital creation.</p>
                 </div>
                 <div class="services-grid">
                     <div class="glass-card">
                         <div class="service-icon" style="background:rgba(0,243,255,0.08);border-radius:16px;border:1px solid rgba(0,243,255,0.15);"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
                         <h3>3D Visualization</h3>
-                        <p style="color:var(--text-secondary);font-weight:300;">Photorealistic rendering that transforms concepts into stunning, production-ready imagery.</p>
+                        <p style="color:var(--text-secondary);font-weight:300;">Photorealistic rendering that transforms abstract concepts into stunning, production-ready imagery — enabling clients to see the future before it is built.</p>
                     </div>
                     <div class="glass-card">
                         <div class="service-icon" style="background:rgba(123,47,247,0.08);border-radius:16px;border:1px solid rgba(123,47,247,0.15);"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                         <h3>Motion Design</h3>
-                        <p style="color:var(--text-secondary);font-weight:300;">Cinematic motion graphics that tell compelling stories through every frame.</p>
+                        <p style="color:var(--text-secondary);font-weight:300;">Cinematic motion graphics crafted frame by frame — designed to hold attention, build emotional momentum, and communicate the impossible.</p>
                     </div>
                     <div class="glass-card">
                         <div class="service-icon" style="background:rgba(201,168,108,0.08);border-radius:16px;border:1px solid rgba(201,168,108,0.15);"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
                         <h3>Interactive Experiences</h3>
-                        <p style="color:var(--text-secondary);font-weight:300;">Immersive WebGL and real-time 3D experiences that push boundaries.</p>
+                        <p style="color:var(--text-secondary);font-weight:300;">Immersive WebGL, real-time 3D, and shader-driven experiences that push beyond the browser's accepted boundaries.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CTA ===== -->
-        <section class="cta-section">
+        <!-- ===== WHY CYBERFICTION / METHOD SECTION ===== -->
+        <section class="section">
+            <div class="page-container">
+                <div class="section-header">
+                    <div class="section-eyebrow">Why CYBERFICTION</div>
+                    <h2 class="section-title">A Studio Built on <span class="gradient-text">Conviction</span></h2>
+                    <p class="section-desc">Great work is the byproduct of a culture that refuses to accept the ordinary.</p>
+                </div>
+                <div class="philosophy-grid">
+                    <div class="glass-card">
+                        <div class="philosophy-number">01</div>
+                        <h3>Art First, Technology Always</h3>
+                        <p>We push beyond the limits of every tool in service of a singular idea: that the most technically accomplished piece is worthless if it lacks emotional resonance. Our creative direction leads, and our technical execution follows.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="philosophy-number">02</div>
+                        <h3>Zero Shortcuts, No Compromises</h3>
+                        <p>The pixels our clients pay for are the same pixels we obsess over. No SLA, no milestone, and no deadline justifies lowering the quality bar. Every delivery leaves our studio as a small act of pride.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="philosophy-number">03</div>
+                        <h3>Credible Speed</h3>
+                        <p>Rushed art is lost art. We build generous time cushions into every engagement so that ideas can mature, revisions can be earned, and the final delivery exceeds what was first imagined.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ===== CTA ===== -->
+         <section class="cta-section section--shot-4">
             <div class="cta-box">
                 <h2 class="cta-title">Ready to Create <span class="gradient-text">Something Extraordinary?</span></h2>
-                <p class="cta-desc">Let's collaborate to bring your vision to life.</p>
+                <p class="cta-desc">Let's collaborate to bring your vision to life — at a level that redefines what you thought was possible.</p>
                 <a href="pages/contact.html" class="btn-primary">Start Your Project →<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             </div>
         </section>
