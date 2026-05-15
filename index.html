@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | CYBERFICTION — Premium 3D Creative Studio</title>
-    <meta name="description" content="CYBERFICTION — Award-winning 3D creative studio crafting immersive digital experiences for visionary brands. We shape digital reality.">
+    <meta name="description" content="CYBERFICTION — Award-winning 3D creative studio. We shape digital reality.">
     <meta name="robots" content="index, follow">
-    <!-- Performance: Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style">
@@ -28,9 +27,15 @@
     <div class="ambient-glow ambient-glow--cyan"></div>
     <div class="ambient-glow ambient-glow--purple"></div>
 
-    <div id="canvas-container"><canvas id="model-canvas"></canvas></div>
+    <!-- Fullscreen background canvas -->
+    <div id="canvas-container">
+        <canvas id="model-canvas"></canvas>
+    </div>
+
+    <!-- Particle Canvas -->
     <canvas id="particles-canvas"></canvas>
 
+    <!-- Navigation -->
     <nav id="nav">
         <a href="index.html" class="logo">CYBER<span class="logo-dot">.</span>FICTION</a>
         <ul class="nav-links">
@@ -44,6 +49,7 @@
         <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
     </nav>
 
+    <!-- Mobile Navigation -->
     <div class="nav-mobile" id="mobileNav" style="display:none;">
         <div class="nav-links">
             <a href="index.html" class="nav-link active">Home</a>
@@ -55,10 +61,12 @@
     </div>
 
     <main id="main">
+
+        <!-- ===== HERO SECTION WITH 3D MODEL CENTERPIECE ===== -->
         <section class="hero-section" id="hero">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="hero-eyebrow">✦ Award-Winning Studio</div>
+                    <div class="hero-eyebrow">✦ Award-Winning 3D Studio</div>
                     <h1 class="hero-title">
                         We Shape<br>
                         <span class="gradient-text">Digital Reality</span><br>
@@ -75,24 +83,41 @@
                         <a href="#showcase" class="btn-secondary">Explore Work</a>
                     </div>
                     <div class="hero-stats">
-                        <div class="hero-stat"><div class="hero-stat-number" data-target="500">0</div><div class="hero-stat-label">Projects Delivered</div></div>
-                        <div class="hero-stat"><div class="hero-stat-number" data-target="150">0</div><div class="hero-stat-label">Global Clients</div></div>
-                        <div class="hero-stat"><div class="hero-stat-number" data-target="24">0</div><div class="hero-stat-label">Industry Awards</div></div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number" data-target="500">0</div>
+                            <div class="hero-stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number" data-target="150">0</div>
+                            <div class="hero-stat-label">Global Clients</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number" data-target="24">0</div>
+                            <div class="hero-stat-label">Industry Awards</div>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-3d-canvas" id="heroCanvas">
-                    <canvas id="hero-3d"></canvas>
-                    <div class="hero-glow-ring"></div>
+
+                <!-- 3D MODEL HERO CANVAS - THE CENTERPIECE -->
+                <div class="hero-model-wrap">
+                    <canvas id="hero-model-canvas"></canvas>
+                    <div class="hero-model-glow"></div>
                 </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                <span>Scroll to Explore</span>
             </div>
         </section>
 
+        <!-- ===== SHOWCASE SECTION ===== -->
         <section class="section" id="showcase">
             <div class="page-container">
                 <div class="section-header">
                     <div class="section-eyebrow">Featured Work</div>
                     <h2 class="section-title">Crafting Digital <span class="gradient-text">Masterpieces</span></h2>
-                    <p class="section-desc">A curated selection of our most impactful projects — where imagination meets precision and every pixel tells a story.</p>
+                    <p class="section-desc">A curated selection of our most impactful projects.</p>
                 </div>
                 <div class="portfolio-grid">
                     <div class="glass-card" style="padding:0;overflow:hidden;min-height:280px;position:relative;">
@@ -120,40 +145,43 @@
             </div>
         </section>
 
+        <!-- ===== SERVICES SECTION ===== -->
         <section class="section" style="background:var(--bg-secondary);">
             <div class="page-container">
                 <div class="section-header">
                     <div class="section-eyebrow">What We Do</div>
                     <h2 class="section-title">Services That <span class="gradient-text">Transcend</span></h2>
-                    <p class="section-desc">From photorealistic visualization to immersive interactive experiences, we deliver excellence across every dimension of digital creation.</p>
+                    <p class="section-desc">From photorealistic visualization to immersive interactive experiences.</p>
                 </div>
                 <div class="services-grid">
                     <div class="glass-card">
                         <div class="service-icon" style="background:rgba(0,243,255,0.08);border-radius:16px;border:1px solid rgba(0,243,255,0.15);"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
                         <h3>3D Visualization</h3>
-                        <p style="color:var(--text-secondary);font-weight:300;">Photorealistic rendering and architectural visualization that transforms concepts into stunning, production-ready imagery.</p>
+                        <p style="color:var(--text-secondary);font-weight:300;">Photorealistic rendering that transforms concepts into stunning, production-ready imagery.</p>
                     </div>
                     <div class="glass-card">
                         <div class="service-icon" style="background:rgba(123,47,247,0.08);border-radius:16px;border:1px solid rgba(123,47,247,0.15);"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                         <h3>Motion Design</h3>
-                        <p style="color:var(--text-secondary);font-weight:300;">Sophisticated animations and cinematic motion graphics that tell compelling stories through every frame.</p>
+                        <p style="color:var(--text-secondary);font-weight:300;">Cinematic motion graphics that tell compelling stories through every frame.</p>
                     </div>
                     <div class="glass-card">
                         <div class="service-icon" style="background:rgba(201,168,108,0.08);border-radius:16px;border:1px solid rgba(201,168,108,0.15);"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
                         <h3>Interactive Experiences</h3>
-                        <p style="color:var(--text-secondary);font-weight:300;">Immersive WebGL and real-time 3D experiences that push the boundaries of interactivity and engagement.</p>
+                        <p style="color:var(--text-secondary);font-weight:300;">Immersive WebGL and real-time 3D experiences that push boundaries.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===== CTA ===== -->
         <section class="cta-section">
             <div class="cta-box">
                 <h2 class="cta-title">Ready to Create <span class="gradient-text">Something Extraordinary?</span></h2>
-                <p class="cta-desc">Let's collaborate to bring your vision to life. Whether it's a product visualization, immersive experience, or cinematic masterpiece — we're ready to push boundaries together.</p>
+                <p class="cta-desc">Let's collaborate to bring your vision to life.</p>
                 <a href="pages/contact.html" class="btn-primary">Start Your Project →<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             </div>
         </section>
+
     </main>
 
     <footer class="site-footer">
